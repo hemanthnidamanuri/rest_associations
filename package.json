@@ -1,0 +1,45 @@
+{
+  "name": "restAPI_Associations",
+  "version": "0.0.1",
+  "main": "src/restAPI_Associations.js",
+  "scripts": {
+    "start-server": "nodemon ./server/index --watch server",
+    "dev": "npm run start-server",
+    "test-server": "mocha 'tests/server/**/*_test.js' --recursive --check-leaks --reporter min --compilers js:babel-register",
+    "noop": "echo 'noop'"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-minify": "^0.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.1",
+    "babel-regenerator-runtime": "^6.5.0",
+    "babel-register": "^6.26.0",
+    "lodash": "^4.6.1",
+    "sequelize": "^5.2.15",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.4.4",
+    "concurrently": "^2.0.0",
+    "del": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hemanthnidamanuri/restAPI_Associations.git"
+  },
+  "author": "hemanthnidamanuri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hemanthnidamanuri/restAPI_Associations/issues"
+  },
+  "homepage": "https://github.com/hemanthnidamanuri/restAPI_Associations",
+  "engines": {
+    "node": ">=9.0.0"
+  }
+}
