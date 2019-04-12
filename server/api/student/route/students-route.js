@@ -21,6 +21,8 @@ export default class studentRoutes {
       router
         .route('/students/modify/:id')
           .patch(studentsController.patchingStudent)
-
+      router
+        .route('/students/get/:name')
+          .get(studentsController.getByName)
   }
 }

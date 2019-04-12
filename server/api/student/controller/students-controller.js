@@ -59,4 +59,13 @@ export default class studentsController {
     })
       .catch(error => {res.status(400).json(error)})
   }
+
+  static  getByName(req,res)
+  {
+    let _name = req.params.name;
+    studentsDao.getByName(_name).then((gbn) => {
+      res.status(200).json(gbn).send(gbn);
+    })
+      .catch(error => {res.status(400).json(error)})
+  }
 }

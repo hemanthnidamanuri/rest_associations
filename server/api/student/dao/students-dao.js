@@ -84,12 +84,23 @@ export default class studentsDao {
   static patchingStudent(req,id)
   {
     return new Promise((resolve,reject) => {
-       models.Students.patch({ucolg: req.ucolg},{where: {id: id}})
+       models.Students.update({ucolg: req.ucolg},{where: {id: id}})
          .then(ps => {
            resolve (ps);
          }, (error) => {
            reject(error);
          });
+    });
+  }
+
+  static getByName(_name){
+    return new Promise((resolve,reject) => {
+      models.Students.findOne({where: {sname: _name}})
+        .then(gb => {
+          resolve(gb);
+        }, (error) => {
+          reject(error);
+        });
     });
   }
 }
