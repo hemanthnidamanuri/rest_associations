@@ -68,4 +68,14 @@ export default class studentsController {
     })
       .catch(error => {res.status(400).json(error)})
   }
+
+  static getByAdd(req,res)
+  {
+    let add = req.params.saddress;
+    console.log("address is = ",add);
+    studentsDao.getByAdd(add).then((gba) => {
+      res.status(200).json(gba).send(gba);
+    })
+      .catch(error => {res.status(400).json(error)})
+  }
 }

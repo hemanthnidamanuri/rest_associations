@@ -101,4 +101,15 @@ export default class studentsDao {
         });
     });
   }
+
+  static getByAdd(add){
+    return new Promise((resolve,reject) => {
+      models.Students.findAll({where: {saddress: add}})
+        .then(ga =>{
+          resolve(ga);
+        }, (error) => {
+          reject(error);
+        });
+    });
+  }
 }

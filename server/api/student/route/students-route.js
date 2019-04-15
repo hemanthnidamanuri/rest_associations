@@ -24,5 +24,8 @@ export default class studentRoutes {
       router
         .route('/students/get/:name')
           .get(studentsController.getByName)
+      router
+        .route('/students/getByAdd/:saddress')
+          .get(studentsController.getByAdd)
   }
 }
