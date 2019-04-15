@@ -80,7 +80,6 @@ export default class studentsDao {
         });
     });
   }
-
   static patchingStudent(req,id)
   {
     return new Promise((resolve,reject) => {
@@ -92,7 +91,6 @@ export default class studentsDao {
          });
     });
   }
-
   static getByName(_name){
     return new Promise((resolve,reject) => {
       models.Students.findOne({where: {sname: _name}})
